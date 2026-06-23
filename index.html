@@ -98,6 +98,54 @@
       .mobile-sticky a{padding:13px 10px;border-radius:999px;text-align:center;font-weight:900;background:var(--gold);color:#1b1106}
       .mobile-sticky a:last-child{background:#25d366;color:white}
     }
+
+    /* User-friendly Castle Admin */
+    .admin-launch{
+      position:fixed;right:18px;bottom:92px;z-index:90;width:46px;height:46px;border-radius:999px;
+      border:1px solid rgba(227,193,120,.4);background:linear-gradient(135deg,var(--gold),var(--gold2));
+      color:#160f09;font-weight:900;box-shadow:var(--shadow);cursor:pointer;display:none;align-items:center;justify-content:center
+    }
+    body.admin-enabled .admin-launch{display:flex}
+    .admin-overlay{position:fixed;inset:0;z-index:100;background:rgba(15,13,11,.72);backdrop-filter:blur(10px);display:none;padding:18px;overflow:auto}
+    .admin-overlay.open{display:block}
+    .admin-panel{max-width:980px;margin:20px auto;background:#fbf4ea;color:#201711;border-radius:28px;box-shadow:0 30px 100px rgba(0,0,0,.45);overflow:hidden}
+    .admin-head{position:sticky;top:0;z-index:2;background:#fbf4ea;border-bottom:1px solid #e6d8c4;padding:20px 24px;display:flex;align-items:flex-start;justify-content:space-between;gap:16px}
+    .admin-title h2{font-family:Playfair Display,serif;margin:0;color:#0f0d0b;font-size:30px}
+    .admin-title p{margin:5px 0 0;color:#775f43;font-weight:600}
+    .admin-close{border:0;background:#170f0a;color:white;border-radius:14px;padding:12px 18px;font-weight:900;cursor:pointer}
+    .admin-body{padding:22px 24px 96px}
+    .admin-helper{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:18px}
+    .admin-note{background:#fff;border:1px solid #eadcc8;border-radius:18px;padding:14px 16px;color:#5f4b35;font-size:14px}
+    .admin-note strong{display:block;color:#1d130d;margin-bottom:3px}
+    .admin-tabs{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0;position:sticky;top:86px;background:#fbf4ea;padding:10px 0;z-index:1}
+    .admin-tab{border:1px solid #dccbb5;background:#fff;border-radius:999px;padding:10px 15px;font-weight:800;cursor:pointer;color:#1d130d}
+    .admin-tab.active{background:#1d130d;color:#fff;border-color:#1d130d}
+    .admin-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .admin-section{display:none}
+    .admin-section.active{display:block}
+    .admin-card{background:#fff;border:1px solid #eadcc8;border-radius:22px;padding:18px;margin-bottom:16px}
+    .admin-card h3{margin:0 0 12px;color:#0f0d0b;font-size:18px}
+    .admin-field{margin-bottom:14px}
+    .admin-field label{display:flex;justify-content:space-between;gap:12px;text-transform:none;letter-spacing:0;color:#6c5134;font-size:13px;font-weight:900;margin-bottom:7px}
+    .admin-field label small{font-weight:700;color:#9a856e}
+    .admin-field input,.admin-field textarea,.admin-field select{
+      width:100%;border:1px solid #d9c9b4;background:#fff;border-radius:14px;padding:13px 14px;font:inherit;color:#111;outline:none
+    }
+    .admin-field textarea{min-height:92px;resize:vertical}
+    .admin-field input:focus,.admin-field textarea:focus,.admin-field select:focus{border-color:var(--gold);box-shadow:0 0 0 4px rgba(201,154,69,.16)}
+    .admin-actions{position:sticky;bottom:0;background:#fbf4ea;border-top:1px solid #e6d8c4;padding:14px 24px;display:flex;gap:12px;justify-content:space-between}
+    .admin-save,.admin-reset,.admin-preview{border:0;border-radius:16px;padding:14px 18px;font-weight:900;cursor:pointer}
+    .admin-save{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#120c07;flex:1}
+    .admin-preview{background:#fff;border:1px solid #d9c9b4;color:#1d130d}
+    .admin-reset{background:#24170f;color:#fff}
+    .admin-toast{position:fixed;left:50%;bottom:26px;transform:translateX(-50%);background:#160f09;color:#fff;padding:12px 18px;border-radius:999px;z-index:120;display:none;font-weight:800}
+    .admin-toast.show{display:block}
+    @media(max-width:760px){
+      .admin-overlay{padding:0}.admin-panel{margin:0;min-height:100vh;border-radius:0}.admin-head{padding:16px}.admin-body{padding:16px 16px 104px}
+      .admin-helper,.admin-grid{grid-template-columns:1fr}.admin-tabs{top:76px;overflow:auto;flex-wrap:nowrap}.admin-tab{white-space:nowrap}
+      .admin-actions{padding:12px 16px;flex-direction:column}.admin-launch{bottom:84px}
+    }
+
   </style>
 </head>
 <body>
@@ -341,13 +389,241 @@
     <a href="https://wa.me/917299820087?text=Hi%20Castle%20Design%2C%20I%20want%20a%20free%20interior%20consultation." target="_blank" rel="noopener">WhatsApp</a>
   </div>
 
+
+  <button class="admin-launch" id="adminLaunch" title="Open Castle Admin">⚙</button>
+
+  <div class="admin-overlay" id="adminOverlay" aria-hidden="true">
+    <div class="admin-panel" role="dialog" aria-modal="true" aria-labelledby="adminTitle">
+      <div class="admin-head">
+        <div class="admin-title">
+          <h2 id="adminTitle">Castle Admin</h2>
+          <p>Edit key website details in a cleaner, grouped panel.</p>
+        </div>
+        <button class="admin-close" id="adminClose" type="button">Close</button>
+      </div>
+
+      <div class="admin-body">
+        <div class="admin-helper">
+          <div class="admin-note"><strong>Quick tip</strong>Use the tabs below instead of scrolling through one long form.</div>
+          <div class="admin-note"><strong>Important</strong>Browser edits are local preview edits. For permanent live changes, update the HTML file in GitHub.</div>
+        </div>
+
+        <div class="admin-tabs" role="tablist">
+          <button class="admin-tab active" data-admin-tab="brand" type="button">Brand & CTA</button>
+          <button class="admin-tab" data-admin-tab="contact" type="button">Contact</button>
+          <button class="admin-tab" data-admin-tab="hero" type="button">Hero</button>
+          <button class="admin-tab" data-admin-tab="content" type="button">Content</button>
+          <button class="admin-tab" data-admin-tab="seo" type="button">SEO</button>
+        </div>
+
+        <form id="castleAdminForm">
+          <section class="admin-section active" data-admin-section="brand">
+            <div class="admin-card">
+              <h3>Basic brand details</h3>
+              <div class="admin-grid">
+                <div class="admin-field"><label>Brand name <small>Header/Footer</small></label><input name="brandName" value="CASTLE DESIGN"></div>
+                <div class="admin-field"><label>Brand subtitle <small>Short label</small></label><input name="brandSubtitle" value="INTERIOR STUDIO"></div>
+                <div class="admin-field"><label>Main button text <small>Navigation CTA</small></label><input name="navCta" value="Book Consultation"></div>
+                <div class="admin-field"><label>WhatsApp number <small>Only digits</small></label><input name="whatsapp" value="917299820087" inputmode="numeric"></div>
+              </div>
+            </div>
+            <div class="admin-card">
+              <h3>Social links</h3>
+              <div class="admin-grid">
+                <div class="admin-field"><label>Instagram URL</label><input name="instagram" value="#" placeholder="https://instagram.com/..."></div>
+                <div class="admin-field"><label>Facebook URL</label><input name="facebook" value="#" placeholder="https://facebook.com/..."></div>
+                <div class="admin-field"><label>Pinterest URL</label><input name="pinterest" value="#" placeholder="https://pinterest.com/..."></div>
+                <div class="admin-field"><label>YouTube URL</label><input name="youtube" value="#" placeholder="https://youtube.com/..."></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="admin-section" data-admin-section="contact">
+            <div class="admin-card">
+              <h3>Contact information</h3>
+              <div class="admin-grid">
+                <div class="admin-field"><label>Primary call number</label><input name="call" value="917299820087" inputmode="numeric"></div>
+                <div class="admin-field"><label>Second number</label><input name="call2" value="917708163644" inputmode="numeric"></div>
+                <div class="admin-field"><label>Email</label><input name="email" value="info@castledesign.com" type="email"></div>
+                <div class="admin-field"><label>Website</label><input name="website" value="www.castledesign.com"></div>
+              </div>
+              <div class="admin-field"><label>Address</label><textarea name="address">Plot No.61, 2nd Cross Street, Perambur Redhills High Road, Kathirvedu, Chennai - 600066</textarea></div>
+              <div class="admin-field"><label>Google Maps embed URL <small>optional</small></label><input name="mapUrl" value="https://www.google.com/maps?q=Kathirvedu%2C%20Chennai%20600066&output=embed"></div>
+            </div>
+          </section>
+
+          <section class="admin-section" data-admin-section="hero">
+            <div class="admin-card">
+              <h3>Homepage hero</h3>
+              <div class="admin-field"><label>Hero eyebrow</label><input name="heroEyebrow" value="Luxury Interior Studio"></div>
+              <div class="admin-field"><label>Hero title line 1</label><input name="heroTitle1" value="Designing"></div>
+              <div class="admin-field"><label>Hero title line 2</label><input name="heroTitle2" value="Your Dreams"></div>
+              <div class="admin-field"><label>Hero description</label><textarea name="heroText">We create timeless, luxurious and functional spaces that reflect your personality and elevate everyday living.</textarea></div>
+            </div>
+            <div class="admin-card">
+              <h3>Homepage stats</h3>
+              <div class="admin-grid">
+                <div class="admin-field"><label>Projects completed</label><input name="statProjects" value="120+"></div>
+                <div class="admin-field"><label>Client satisfaction</label><input name="statSatisfaction" value="100%"></div>
+                <div class="admin-field"><label>Years experience</label><input name="statYears" value="4+"></div>
+                <div class="admin-field"><label>Design support</label><input name="statSupport" value="24/7"></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="admin-section" data-admin-section="content">
+            <div class="admin-card">
+              <h3>Section wording</h3>
+              <div class="admin-field"><label>About heading</label><input name="aboutHeading" value="Interiors with character, comfort and craft."></div>
+              <div class="admin-field"><label>About description</label><textarea name="aboutText">We are a young, energetic interior studio with a fresh design perspective and disciplined execution. Our work balances premium aesthetics, practical layouts, durable materials and transparent project coordination.</textarea></div>
+              <div class="admin-field"><label>Services intro</label><textarea name="servicesIntro">Complete interior solutions designed for modern living, crafted with premium finish and practical functionality.</textarea></div>
+              <div class="admin-field"><label>Final CTA heading</label><input name="finalCta" value="Luxury is not about spending more. It is about planning better."></div>
+            </div>
+          </section>
+
+          <section class="admin-section" data-admin-section="seo">
+            <div class="admin-card">
+              <h3>Search preview</h3>
+              <div class="admin-field"><label>Page title</label><input name="seoTitle" value="Castle Design | Premium Interior Design & Turnkey Execution in Chennai"></div>
+              <div class="admin-field"><label>Meta description</label><textarea name="seoDescription">Castle Design is a Chennai-based interior studio offering home interiors, modular kitchens, wardrobes, office interiors, renovation and turnkey execution.</textarea></div>
+            </div>
+          </section>
+        </form>
+      </div>
+
+      <div class="admin-actions">
+        <button class="admin-preview" id="adminPreview" type="button">Preview on Page</button>
+        <button class="admin-save" id="adminSave" type="button">Save Browser Draft</button>
+        <button class="admin-reset" id="adminReset" type="button">Reset</button>
+      </div>
+    </div>
+  </div>
+  <div class="admin-toast" id="adminToast">Saved</div>
+
+
   <script>
-    document.getElementById('enquiryForm').addEventListener('submit', function(e){
-      e.preventDefault();
-      const data = Object.fromEntries(new FormData(this).entries());
-      const text = `Hi Castle Design, I want a free consultation.%0A%0AName: ${data.name || '-'}%0APhone: ${data.phone || '-'}%0ALocation: ${data.location || '-'}%0AProperty: ${data.property || '-'}%0AProject: ${data.project || '-'}%0ABudget: ${data.budget || '-'}%0ARequirement: ${data.message || '-'}`;
-      window.open(`https://wa.me/917299820087?text=${text}`, '_blank');
+    const enquiryForm = document.getElementById('enquiryForm');
+    if(enquiryForm){
+      enquiryForm.addEventListener('submit', function(e){
+        e.preventDefault();
+        const data = Object.fromEntries(new FormData(this).entries());
+        const text = `Hi Castle Design, I want a free consultation.%0A%0AName: ${data.name || '-'}%0APhone: ${data.phone || '-'}%0ALocation: ${data.location || '-'}%0AProperty: ${data.property || '-'}%0AProject: ${data.project || '-'}%0ABudget: ${data.budget || '-'}%0ARequirement: ${data.message || '-'}`;
+        window.open(`https://wa.me/917299820087?text=${text}`, '_blank');
+      });
+    }
+
+    // Admin access: add ?admin=1 to the page URL or press Ctrl + Shift + A.
+    const adminLaunch = document.getElementById('adminLaunch');
+    const adminOverlay = document.getElementById('adminOverlay');
+    const adminClose = document.getElementById('adminClose');
+    const adminForm = document.getElementById('castleAdminForm');
+    const adminToast = document.getElementById('adminToast');
+
+    function enableAdmin(){
+      document.body.classList.add('admin-enabled');
+      adminLaunch.style.display = 'flex';
+    }
+    if(new URLSearchParams(location.search).get('admin') === '1') enableAdmin();
+    document.addEventListener('keydown', (e)=>{
+      if(e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'a') enableAdmin();
+      if(e.key === 'Escape') adminOverlay.classList.remove('open');
     });
+    adminLaunch.addEventListener('click', ()=> adminOverlay.classList.add('open'));
+    adminClose.addEventListener('click', ()=> adminOverlay.classList.remove('open'));
+
+    document.querySelectorAll('[data-admin-tab]').forEach(tab=>{
+      tab.addEventListener('click', ()=>{
+        document.querySelectorAll('[data-admin-tab]').forEach(t=>t.classList.remove('active'));
+        document.querySelectorAll('[data-admin-section]').forEach(s=>s.classList.remove('active'));
+        tab.classList.add('active');
+        document.querySelector(`[data-admin-section="${tab.dataset.adminTab}"]`).classList.add('active');
+      });
+    });
+
+    const adminMap = {
+      brandName: ['.brand span:nth-child(2)', '.footer-grid .brand span:nth-child(2)'],
+      brandSubtitle: ['.brand small', '.footer-grid .brand small'],
+      navCta: ['.nav .btn'],
+      heroEyebrow: ['#home .eyebrow'],
+      heroText: ['#home p'],
+      aboutHeading: ['#about h2'],
+      aboutText: ['#about p'],
+      servicesIntro: ['#services .section-head p'],
+      finalCta: ['.cta h2']
+    };
+
+    function setText(selector, value){
+      document.querySelectorAll(selector).forEach(el=>{
+        if(el.childElementCount && selector.includes('.brand span:nth-child(2)')){
+          const small = el.querySelector('small');
+          el.childNodes[0].nodeValue = value;
+          if(small) el.appendChild(small);
+        } else {
+          el.textContent = value;
+        }
+      });
+    }
+
+    function applyAdminData(data){
+      Object.entries(adminMap).forEach(([key, selectors])=>{
+        if(data[key]) selectors.forEach(sel=>setText(sel, data[key]));
+      });
+      if(data.heroTitle1 || data.heroTitle2){
+        const heroTitle = document.querySelector('#home h1');
+        if(heroTitle) heroTitle.innerHTML = `${data.heroTitle1 || 'Designing'}<br><span>${data.heroTitle2 || 'Your Dreams'}</span>`;
+      }
+      if(data.seoTitle) document.title = data.seoTitle;
+      if(data.seoDescription){
+        const meta = document.querySelector('meta[name="description"]');
+        if(meta) meta.setAttribute('content', data.seoDescription);
+      }
+      if(data.mapUrl){
+        const map = document.querySelector('.map');
+        if(map) map.src = data.mapUrl;
+      }
+    }
+
+    function getAdminData(){
+      return Object.fromEntries(new FormData(adminForm).entries());
+    }
+
+    function loadAdminDraft(){
+      const saved = localStorage.getItem('castleAdminDraft');
+      if(!saved) return;
+      const data = JSON.parse(saved);
+      Object.entries(data).forEach(([key,value])=>{
+        const field = adminForm.elements[key];
+        if(field) field.value = value;
+      });
+      applyAdminData(data);
+    }
+
+    function toast(message){
+      adminToast.textContent = message;
+      adminToast.classList.add('show');
+      setTimeout(()=>adminToast.classList.remove('show'), 1800);
+    }
+
+    document.getElementById('adminPreview').addEventListener('click', ()=>{
+      applyAdminData(getAdminData());
+      toast('Preview updated');
+    });
+
+    document.getElementById('adminSave').addEventListener('click', ()=>{
+      const data = getAdminData();
+      localStorage.setItem('castleAdminDraft', JSON.stringify(data));
+      applyAdminData(data);
+      toast('Browser draft saved');
+    });
+
+    document.getElementById('adminReset').addEventListener('click', ()=>{
+      if(confirm('Reset browser draft and reload original content?')){
+        localStorage.removeItem('castleAdminDraft');
+        location.reload();
+      }
+    });
+
+    loadAdminDraft();
   </script>
 </body>
 </html>

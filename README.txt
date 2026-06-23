@@ -1,21 +1,14 @@
-Castle Design - AIM Project Update
+Castle Design - User Friendly Admin Update
 
-This version keeps the same old Castle Design dark/gold UI and updates only the content and conversion sections.
+What's updated:
+- Same Castle Design dark/gold public UI preserved.
+- Added cleaner Castle Admin panel grouped into tabs:
+  Brand & CTA, Contact, Hero, Content, SEO.
+- Removed public default password text.
+- Added helper notes, clearer labels, input hints, sticky save bar, and mobile-friendly admin layout.
+- Admin opens only when you add ?admin=1 to the page URL or press Ctrl + Shift + A.
+- Browser draft saving uses localStorage for preview edits.
 
-Updated:
-- Removed exposed admin/password content
-- Added stronger CTAs and WhatsApp enquiry flow
-- Added detailed services, pricing guidance, FAQ and map
-- Changed project/testimonial placeholder copy into cleaner client-facing copy
-- Added better contact form fields
-- Kept the same visual direction and layout style
-
-To publish:
-1. Upload/replace index.html in the GitHub Pages repository.
-2. Commit the file.
-3. Wait for GitHub Pages to refresh.
-
-Before final live launch:
-- Replace concept project cards with real project photos.
-- Confirm the business email shown on the contact section.
-- Replace map/address if the office address changes.
+Important:
+Because GitHub Pages is a static website, admin edits saved in the browser are not automatically published for every visitor.
+For permanent updates, copy the final content into index.html and commit/push to GitHub.
