@@ -1,45 +1,442 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Castle Design | Interior Studio</title>
-<meta name="description" content="Castle Design Interior Studio offers premium interior design and turnkey solutions in Chennai." />
-<link rel="preconnect" href="https://images.unsplash.com">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<style>
-:root{--black:#070604;--dark:#0f0d0a;--panel:#15120e;--cream:#f7efe3;--soft:#d8c7ad;--muted:#9b8b75;--gold:#c99b45;--gold2:#f1d28a;--white:#fffdf8;--line:rgba(201,155,69,.28);--shadow:0 28px 80px rgba(0,0,0,.35);--radius:28px}*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:Inter,Segoe UI,Tahoma,sans-serif;background:var(--black);color:var(--cream);overflow-x:hidden}a{text-decoration:none;color:inherit}img{display:block;max-width:100%}.container{width:min(1180px,92%);margin:auto}.gold{color:var(--gold2)}.loader{position:fixed;inset:0;background:#050403;z-index:9999;display:grid;place-items:center;animation:loaderOut .7s ease 1.7s forwards}.loader-logo{display:grid;place-items:center;text-align:center}.cd-mark{font-family:Georgia,serif;color:var(--gold2);font-size:54px;letter-spacing:-12px;text-shadow:0 0 34px rgba(241,210,138,.34)}.loader-logo p{letter-spacing:9px;font-size:12px;color:var(--soft);margin-top:12px}@keyframes loaderOut{to{opacity:0;visibility:hidden}}.glow{position:fixed;width:280px;height:280px;border-radius:50%;background:radial-gradient(circle,rgba(201,155,69,.18),transparent 64%);pointer-events:none;z-index:1;mix-blend-mode:screen;transform:translate(-50%,-50%)}header{position:fixed;top:18px;left:0;width:100%;z-index:1000;transition:.35s}.nav{display:flex;align-items:center;justify-content:space-between;border:1px solid var(--line);background:rgba(5,4,3,.66);backdrop-filter:blur(18px);border-radius:22px;padding:12px 18px;box-shadow:0 18px 50px rgba(0,0,0,.24)}header.scrolled{top:9px}.brand{display:flex;align-items:center;gap:14px}.brand-icon{width:42px;height:42px;border:1px solid var(--gold);display:grid;place-items:center;color:var(--gold2);font-family:Georgia,serif;font-size:28px;letter-spacing:-7px}.brand h3{font-family:Georgia,serif;font-size:15px;letter-spacing:5px;font-weight:500;color:var(--gold2);white-space:nowrap}.brand span{display:block;font-size:9px;letter-spacing:4px;color:var(--soft);margin-top:3px}.links{display:flex;gap:28px;align-items:center;color:var(--soft);font-size:12px;text-transform:uppercase;letter-spacing:.8px}.links a{position:relative}.links a:after{content:"";position:absolute;left:0;bottom:-9px;width:0;height:1px;background:var(--gold);transition:.3s}.links a:hover:after{width:100%}.nav-btn{border:1px solid var(--gold);padding:12px 18px;border-radius:12px;color:var(--gold2)}.hamb{display:none;background:none;border:0;color:var(--gold2);font-size:24px}.hero{min-height:100vh;position:relative;display:grid;align-items:center;isolation:isolate;background:center/cover no-repeat}.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,6,4,.94),rgba(7,6,4,.68) 45%,rgba(7,6,4,.20)),linear-gradient(0deg,rgba(7,6,4,.98),transparent 48%);z-index:-1}.hero-content{padding-top:70px;max-width:760px;transform:translateY(-52px)}.eyebrow{display:inline-flex;gap:10px;align-items:center;text-transform:uppercase;letter-spacing:2.4px;font-size:12px;color:var(--gold2);margin-bottom:24px}.eyebrow:before{content:"✦"}.hero h1{font-family:Georgia,serif;font-size:clamp(46px,8vw,104px);line-height:.92;font-weight:500;letter-spacing:-4px;text-shadow:0 22px 65px #000}.hero p{max-width:600px;color:var(--soft);font-size:18px;line-height:1.8;margin:28px 0 34px}.actions{display:flex;flex-wrap:wrap;gap:16px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:1px solid var(--line);border-radius:14px;padding:16px 24px;transition:.3s;text-transform:uppercase;letter-spacing:.8px;font-size:13px;position:relative;overflow:hidden}.btn.primary{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#21170e;border:0;font-weight:800}.btn:hover{transform:translateY(-4px);box-shadow:0 16px 42px rgba(0,0,0,.32)}.hero-social{position:absolute;right:30px;top:38%;display:grid;gap:16px}.hero-social a{width:40px;height:40px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;background:rgba(5,4,3,.44);backdrop-filter:blur(10px);transition:.3s}.hero-social a:hover{color:var(--gold2);transform:translateX(-5px)}.hero-stats{position:absolute;left:50%;bottom:8%;transform:translateX(-50%);width:min(1040px,90%);display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:22px;background:rgba(5,4,3,.58);backdrop-filter:blur(18px);padding:16px}.stat{padding:16px 26px;border-right:1px solid rgba(201,155,69,.2);display:flex;gap:14px;align-items:center}.stat:last-child{border-right:0}.stat i{font-size:30px;color:var(--gold2)}.stat b{font-family:Georgia,serif;font-size:32px;color:var(--gold2);font-weight:500}.stat span{display:block;font-size:12px;text-transform:uppercase;color:var(--soft)}.marquee{overflow:hidden;padding:18px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:rgba(255,255,255,.03)}.track{display:flex;white-space:nowrap;gap:44px;color:var(--gold2);animation:marq 25s linear infinite}.track span:after{content:"✦";margin-left:44px;color:var(--gold)}@keyframes marq{to{transform:translateX(-50%)}}section{padding:110px 0}.light{background:var(--cream);color:#17120e}.section-head{display:flex;align-items:end;justify-content:space-between;gap:28px;margin-bottom:46px}.section-head h2{font-family:Georgia,serif;font-size:clamp(34px,4.5vw,60px);font-weight:500;letter-spacing:-1.4px}.section-head p{max-width:480px;color:var(--muted);line-height:1.7}.about{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}.about-images{display:grid;grid-template-columns:1fr .72fr;gap:18px;align-items:end}.about-images img{height:420px;width:100%;object-fit:cover;border-radius:var(--radius);box-shadow:var(--shadow)}.about-images img:nth-child(2){height:300px}.about-copy h2{font-family:Georgia,serif;font-size:52px;font-weight:500;line-height:1.02;margin:12px 0 22px}.about-copy p{color:#6f604d;line-height:1.85}.checks{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:24px}.checks div{display:flex;gap:10px;color:#33291f}.checks i{color:var(--gold)}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.service,.why-card,.review,.mission-card{border:1px solid var(--line);border-radius:24px;padding:30px;background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.025));transition:.35s}.service:hover,.why-card:hover,.mission-card:hover{transform:translateY(-8px);border-color:rgba(241,210,138,.55)}.service i,.why-card i,.mission-card i{color:var(--gold2);font-size:28px;margin-bottom:20px}.service h3,.why-card h3,.mission-card h3{font-family:Georgia,serif;font-size:25px;margin-bottom:10px}.service p,.why-card p,.mission-card p,.review p{color:var(--soft);line-height:1.7}.mission{display:grid;grid-template-columns:1fr 1fr;gap:20px}.process{display:grid;grid-template-columns:.95fr 1.05fr;gap:34px;align-items:center}.process-visual{border-radius:34px;min-height:600px;background:center/cover no-repeat;position:relative;overflow:hidden;box-shadow:var(--shadow)}.process-visual:before{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(7,6,4,.78),transparent)}.process-tag{position:absolute;left:28px;right:28px;bottom:28px;background:rgba(255,253,248,.88);color:#17120e;border-radius:24px;padding:26px}.process-tag h3{font-family:Georgia,serif;font-size:30px}.process-tag p{color:#6f604d;margin-top:8px}.steps{display:grid;gap:18px}.step{display:grid;grid-template-columns:72px 1fr;gap:18px;background:#fffaf2;border:1px solid rgba(30,22,15,.12);box-shadow:0 14px 34px rgba(40,30,20,.08);border-radius:26px;padding:24px;transition:.3s}.step:hover{transform:translateX(8px)}.num{height:72px;border-radius:22px;background:#0c0a08;color:var(--gold2);display:grid;place-items:center;font-family:Georgia,serif;font-size:22px}.step h3{font-family:Georgia,serif;font-size:25px}.step p{color:#6f604d;line-height:1.65;margin-top:6px}.portfolio{display:grid;grid-template-columns:1.2fr .8fr .8fr;grid-auto-rows:260px;gap:18px}.project{border-radius:26px;overflow:hidden;position:relative}.project:first-child{grid-row:span 2}.project img{width:100%;height:100%;object-fit:cover;transition:.55s}.project:hover img{transform:scale(1.08)}.project:after{content:attr(data-title);position:absolute;left:18px;bottom:18px;background:rgba(7,6,4,.68);border:1px solid var(--line);border-radius:999px;color:var(--gold2);padding:12px 16px;backdrop-filter:blur(10px)}.before-after{position:relative;min-height:390px;border-radius:30px;overflow:hidden;box-shadow:var(--shadow)}.before-after img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.before-after .after{clip-path:inset(0 0 0 50%)}.ba-line{position:absolute;top:0;bottom:0;left:50%;width:2px;background:var(--gold2);z-index:4}.ba-handle{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:5;background:var(--gold2);color:#21170e;width:54px;height:54px;border-radius:50%;display:grid;place-items:center}.ba-label{position:absolute;top:18px;z-index:6;padding:9px 13px;border-radius:999px;background:rgba(7,6,4,.76);border:1px solid var(--line);font-size:12px}.ba-label.after-l{right:18px;color:var(--gold2)}.ba-label.before{left:18px}.ba-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}.light .why-card{background:#fffaf2}.light .why-card h3{color:#17120e}.light .why-card p{color:#6f604d}.light .why-card i{color:var(--gold)}.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.stars{color:var(--gold2);margin-bottom:16px}.person{display:flex;gap:12px;align-items:center;margin-top:22px}.avatar{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#21170e;display:grid;place-items:center;font-weight:800}.person span{display:block;color:var(--muted);font-size:13px}.faq-map{display:grid;grid-template-columns:1fr 1fr;gap:28px}.faq-item{background:#fffaf2;border:1px solid rgba(30,22,15,.12);border-radius:22px;margin-bottom:12px;overflow:hidden}.faq-q{width:100%;border:0;background:transparent;padding:22px;text-align:left;display:flex;justify-content:space-between;color:#17120e;font-weight:800;cursor:pointer}.faq-a{max-height:0;overflow:hidden;transition:.35s;color:#6f604d;line-height:1.65;padding:0 22px}.faq-item.open .faq-a{max-height:160px;padding:0 22px 22px}.map iframe{width:100%;height:365px;border:0;border-radius:28px;filter:saturate(.85)}.contact{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px}.contact-card,.form{background:#fffaf2;border-radius:32px;padding:36px;border:1px solid rgba(30,22,15,.12);box-shadow:0 14px 40px rgba(35,25,15,.08)}.contact h3,.form h3{font-family:Georgia,serif;font-size:36px;margin-bottom:18px}.contact p{color:#6f604d}.contact-row{display:flex;gap:14px;color:#5d4e40;margin:18px 0;line-height:1.55}.contact-row i{color:var(--gold)}.form form{display:grid;gap:14px}.form input,.form textarea,.form select{width:100%;border:1px solid rgba(30,22,15,.15);border-radius:15px;background:white;color:#17120e;padding:16px;font:inherit}.form textarea{min-height:130px;resize:vertical}.form button{border:0;cursor:pointer}.newsletter{border-radius:34px;background:linear-gradient(135deg,#1a130f,#4b3524,#c99b45);padding:44px;display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center}.newsletter h2{font-family:Georgia,serif;font-size:42px}.newsletter p{color:#fff0d2;margin-top:10px}.newsletter form{display:flex;gap:12px}.newsletter input{flex:1;border:1px solid rgba(255,255,255,.24);border-radius:999px;background:rgba(255,255,255,.14);color:white;padding:16px}.footer-cta{background:linear-gradient(135deg,#211812,#4b3524,#c99b45);text-align:center;padding:80px 0}.footer-cta h2{font-family:Georgia,serif;font-size:clamp(34px,5vw,70px);font-weight:500}.footer-cta p{margin:14px 0 26px;color:#fff5df}.footer{background:radial-gradient(circle at 20% 0,rgba(201,155,69,.18),transparent 35%),#050403;padding:76px 0 26px}.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.1fr;gap:34px;padding-bottom:44px;border-bottom:1px solid var(--line)}.footer h4{font-family:Georgia,serif;color:var(--gold2);font-size:22px;margin-bottom:18px}.footer p,.footer a{color:var(--muted);line-height:1.8;font-size:14px}.footer-logo .brand-icon{width:54px;height:54px;font-size:34px;margin-bottom:16px}.social{display:flex;gap:12px;margin-top:18px}.social a{width:42px;height:42px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;transition:.3s}.social a:hover{background:var(--gold);color:#21170e}.mini-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.mini-gallery img{height:72px;width:100%;object-fit:cover;border-radius:12px}.bottom{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;padding-top:24px;color:#786c5f;font-size:13px}.float{position:fixed;right:22px;bottom:22px;z-index:900;display:grid;gap:12px}.float a{width:54px;height:54px;border-radius:50%;display:grid;place-items:center;color:white;box-shadow:0 12px 28px rgba(0,0,0,.28)}.wa{background:#25d366}.call{background:#0077b6}.top{background:var(--gold);color:#21170e!important;opacity:0;pointer-events:none}.top.show{opacity:1;pointer-events:auto}.admin-open{position:fixed;left:18px;bottom:18px;z-index:1200;background:rgba(5,4,3,.72);border:1px solid var(--line);color:var(--gold2);width:48px;height:48px;border-radius:50%;display:grid;place-items:center;cursor:pointer}.admin{position:fixed;inset:0;background:rgba(0,0,0,.72);z-index:10000;display:none}.admin.show{display:block}.admin-panel{position:absolute;right:0;top:0;height:100%;width:min(560px,100%);background:#fffaf2;color:#17120e;overflow:auto;padding:24px;box-shadow:-24px 0 70px rgba(0,0,0,.4)}.admin-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}.admin-head h2{font-family:Georgia,serif}.admin-close{border:0;background:#17120e;color:white;border-radius:10px;padding:10px 14px;cursor:pointer}.admin-tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}.admin-tabs button{border:1px solid rgba(30,22,15,.15);background:white;padding:10px 12px;border-radius:999px;cursor:pointer}.admin-tabs button.active{background:#17120e;color:var(--gold2)}.admin-section{display:none}.admin-section.active{display:grid;gap:12px}.admin label{font-size:12px;text-transform:uppercase;letter-spacing:1px;color:#766754;font-weight:800}.admin input,.admin textarea{width:100%;border:1px solid rgba(30,22,15,.18);border-radius:12px;padding:12px;background:white;color:#17120e}.admin textarea{min-height:90px}.admin .row{display:grid;grid-template-columns:1fr 1fr;gap:10px}.admin-actions{position:sticky;bottom:0;background:#fffaf2;padding:16px 0 0;display:flex;gap:10px}.admin-actions button,.login button{flex:1;border:0;background:linear-gradient(135deg,var(--gold),var(--gold2));padding:14px;border-radius:12px;font-weight:800;cursor:pointer}.danger{background:#2a2119!important;color:white!important}.login{display:grid;gap:12px;margin-top:80px}.edit-list{display:grid;gap:14px}.edit-card{border:1px solid rgba(30,22,15,.12);background:white;border-radius:16px;padding:14px}.upload-note{font-size:12px;color:#766754;line-height:1.5}.reveal{opacity:0;transform:translateY(35px);transition:1s ease}.reveal.active{opacity:1;transform:none}@media(max-width:1020px){.links{position:fixed;right:-100%;top:84px;width:82%;height:calc(100vh - 84px);background:rgba(7,6,4,.96);backdrop-filter:blur(18px);flex-direction:column;align-items:flex-start;padding:36px;transition:.35s}.links.open{right:0}.hamb{display:block}.hero-social{display:none}.hero-stats{position:static;transform:none;width:100%;grid-template-columns:repeat(2,1fr);margin-top:30px}.stat:nth-child(2){border-right:0}.hero{padding:130px 0 60px}.hero-content{transform:none}.about,.process,.contact,.faq-map,.newsletter{grid-template-columns:1fr}.cards,.reviews{grid-template-columns:1fr 1fr}.portfolio{grid-template-columns:1fr 1fr}.project:first-child{grid-row:auto}.footer-grid{grid-template-columns:1fr 1fr}.section-head{display:block}.section-head p{margin-top:14px}}@media(max-width:640px){.glow{display:none}header{top:9px}.nav{border-radius:16px;padding:10px 12px}.brand-icon{width:36px;height:36px;font-size:24px}.brand h3{font-size:13px;letter-spacing:3px}.brand span{font-size:8px;letter-spacing:2px}.nav-btn{display:none}.hero h1{letter-spacing:-2px}.hero p{font-size:16px}.hero-stats,.cards,.reviews,.portfolio,.mission,.ba-grid,.footer-grid,.checks{grid-template-columns:1fr}.stat{border-right:0;border-bottom:1px solid rgba(201,155,69,.18)}.stat:last-child{border-bottom:0}.actions{display:grid}.btn{width:100%}section{padding:76px 0}.about-images{grid-template-columns:1fr}.about-images img,.about-images img:nth-child(2),.process-visual{height:auto;min-height:360px}.step{grid-template-columns:1fr}.newsletter form{flex-direction:column}.admin .row{grid-template-columns:1fr}}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Castle Design | Premium Interior Design & Turnkey Execution in Chennai</title>
+  <meta name="description" content="Castle Design is a Chennai-based interior studio offering home interiors, modular kitchens, wardrobes, office interiors and turnkey execution." />
+  <meta name="keywords" content="interior design Chennai, modular kitchen Chennai, home interiors Chennai, turnkey interiors Chennai, Castle Design" />
+  <meta property="og:title" content="Castle Design | Interior Studio Chennai" />
+  <meta property="og:description" content="Designing your dreams with elegant, functional and practical interiors." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f0d0b;
+      --panel:#171310;
+      --panel2:#211a15;
+      --gold:#c99a45;
+      --gold2:#e3c178;
+      --cream:#fff6e8;
+      --muted:#cdbda8;
+      --white:#ffffff;
+      --line:rgba(255,255,255,.12);
+      --shadow:0 24px 70px rgba(0,0,0,.35);
+      --radius:24px;
+      --max:1180px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--cream);font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;line-height:1.6}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{width:min(var(--max),calc(100% - 36px));margin:auto}
+    .topbar{position:sticky;top:0;z-index:50;background:rgba(15,13,11,.82);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+    .nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.08em}
+    .logo{width:46px;height:46px;border-radius:15px;background:linear-gradient(135deg,var(--gold),#704915);display:grid;place-items:center;color:#150f08;font-weight:900;box-shadow:0 10px 24px rgba(201,154,69,.25)}
+    .brand small{display:block;color:var(--muted);letter-spacing:.18em;font-size:11px;font-weight:600}
+    .links{display:flex;align-items:center;gap:22px;color:var(--muted);font-size:14px}
+    .links a:hover{color:var(--gold2)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:1px solid rgba(201,154,69,.45);background:linear-gradient(135deg,var(--gold),#9b6925);color:#1b1106;font-weight:800;border-radius:999px;padding:13px 20px;box-shadow:0 12px 28px rgba(201,154,69,.18);cursor:pointer}
+    .btn.secondary{background:transparent;color:var(--cream);border-color:var(--line);box-shadow:none}
+    .btn.whatsapp{background:linear-gradient(135deg,#25d366,#128c7e);border-color:transparent;color:white}
+    .hero{position:relative;overflow:hidden;padding:92px 0 66px;background:
+      radial-gradient(circle at 15% 10%,rgba(201,154,69,.22),transparent 32%),
+      radial-gradient(circle at 84% 18%,rgba(227,193,120,.12),transparent 28%),
+      linear-gradient(180deg,#15100c 0%,#0f0d0b 100%)}
+    .hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:46px;align-items:center}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;color:var(--gold2);font-weight:800;letter-spacing:.18em;text-transform:uppercase;font-size:12px}
+    h1,h2,h3{line-height:1.05;margin:0}
+    h1{font-family:"Playfair Display",serif;font-size:clamp(48px,8vw,92px);letter-spacing:-.04em;margin:18px 0}
+    h2{font-family:"Playfair Display",serif;font-size:clamp(34px,5vw,58px);letter-spacing:-.03em}
+    h3{font-size:22px}
+    p{color:var(--muted);margin:0}
+    .hero p{font-size:18px;max-width:650px}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
+    .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:38px}
+    .stat{padding:18px;border:1px solid var(--line);border-radius:20px;background:rgba(255,255,255,.04)}
+    .stat b{display:block;font-size:28px;color:var(--gold2)}
+    .stat span{font-size:13px;color:var(--muted)}
+    .visual{min-height:560px;border-radius:34px;background:
+      linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.02)),
+      url('assets/hero-interior.jpg') center/cover no-repeat;
+      border:1px solid var(--line);box-shadow:var(--shadow);position:relative;overflow:hidden}
+    .visual:before{content:"";position:absolute;inset:0;background:linear-gradient(140deg,rgba(0,0,0,.1),rgba(0,0,0,.55))}
+    .visual-card{position:absolute;left:24px;right:24px;bottom:24px;padding:22px;border-radius:24px;background:rgba(15,13,11,.76);border:1px solid var(--line);backdrop-filter:blur(12px)}
+    .ticker{border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;background:#120f0d}
+    .ticker-track{white-space:nowrap;animation:marquee 26s linear infinite;color:var(--gold2);font-weight:800;letter-spacing:.08em;padding:16px 0}
+    @keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+    section{padding:88px 0}
+    .section-head{display:flex;align-items:end;justify-content:space-between;gap:28px;margin-bottom:34px}
+    .section-head p{max-width:620px}
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,.065),rgba(255,255,255,.025));border:1px solid var(--line);border-radius:var(--radius);padding:26px;box-shadow:0 18px 46px rgba(0,0,0,.18)}
+    .card .icon{width:48px;height:48px;border-radius:16px;display:grid;place-items:center;background:rgba(201,154,69,.14);color:var(--gold2);font-weight:900;margin-bottom:16px}
+    .list{display:grid;gap:12px;margin-top:22px}
+    .list div{display:flex;gap:10px;color:var(--muted)}
+    .list div:before{content:"✓";color:var(--gold2);font-weight:900}
+    .process{counter-reset:step}
+    .process .card{position:relative}
+    .process .card:before{counter-increment:step;content:"0" counter(step);display:inline-grid;place-items:center;width:42px;height:42px;border-radius:50%;background:var(--gold);color:#1b1106;font-weight:900;margin-bottom:18px}
+    .project{padding:0;overflow:hidden}
+    .project-img{height:230px;background:#2a211a center/cover no-repeat}
+    .project-body{padding:22px}
+    .project:nth-child(1) .project-img{background-image:url('assets/project-living-room.jpg')}
+    .project:nth-child(2) .project-img{background-image:url('assets/project-kitchen.jpg')}
+    .project:nth-child(3) .project-img{background-image:url('assets/project-bedroom.jpg')}
+    .project:nth-child(4) .project-img{background-image:url('assets/project-office.jpg')}
+    .badge{display:inline-flex;padding:6px 10px;border-radius:999px;background:rgba(201,154,69,.16);color:var(--gold2);font-size:12px;font-weight:800;margin-bottom:10px}
+    .why .card b{display:block;color:var(--cream);margin-bottom:8px}
+    .testimonial{min-height:240px}
+    .stars{color:var(--gold2);letter-spacing:2px;margin-bottom:16px}
+    .pricing{background:linear-gradient(180deg,#130f0d,#17110d)}
+    .price{font-size:34px;color:var(--gold2);font-weight:900;margin:12px 0}
+    .faq{display:grid;gap:14px}
+    details{background:rgba(255,255,255,.045);border:1px solid var(--line);border-radius:18px;padding:18px 20px}
+    summary{cursor:pointer;font-weight:800;color:var(--cream)}
+    details p{padding-top:12px}
+    .contact-wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px;align-items:start}
+    .contact-info{display:grid;gap:16px}
+    form{display:grid;gap:14px}
+    input,select,textarea{width:100%;border:1px solid var(--line);background:rgba(255,255,255,.055);color:var(--cream);border-radius:16px;padding:15px 16px;font:inherit;outline:none}
+    option{color:#1b1106}
+    textarea{min-height:120px;resize:vertical}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .map{height:360px;border:0;width:100%;border-radius:var(--radius);filter:saturate(.8) contrast(1.05)}
+    .footer{padding:54px 0;border-top:1px solid var(--line);background:#0b0908}
+    .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:28px}
+    .footer a{display:block;color:var(--muted);margin-top:10px}
+    .sticky-cta{position:fixed;right:18px;bottom:18px;z-index:60;display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+    .note{font-size:13px;color:var(--muted)}
+    @media (max-width:900px){
+      .links{display:none}
+      .hero-grid,.grid-2,.contact-wrap,.footer-grid{grid-template-columns:1fr}
+      .grid-3,.grid-4{grid-template-columns:1fr 1fr}
+      .stats{grid-template-columns:1fr 1fr}
+      .visual{min-height:420px}
+      section{padding:62px 0}
+    }
+    @media (max-width:560px){
+      .grid-3,.grid-4,.form-row{grid-template-columns:1fr}
+      .hero-actions .btn{width:100%}
+      .sticky-cta{left:14px;right:14px}
+      .sticky-cta .btn{flex:1;padding:12px}
+    }
+  </style>
 </head>
 <body>
-<div class="glow" id="glow"></div><div class="loader"><div class="loader-logo"><div class="cd-mark">CD</div><p>CASTLE DESIGN</p></div></div>
-<header id="header"><div class="container nav"><a class="brand" href="#home"><div class="brand-icon">CD</div><div><h3 data-bind="brandName">CASTLE DESIGN</h3><span data-bind="brandSubtitle">INTERIOR STUDIO</span></div></a><nav class="links" id="links"><a href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a><a href="#projects">Projects</a><a href="#process">Process</a><a href="#contact">Contact</a><a class="nav-btn" href="#contact" data-bind="navCta">Book Consultation</a></nav><button class="hamb" id="hamb"><i class="fa-solid fa-bars"></i></button></div></header>
-<section class="hero" id="home"><div class="container"><div class="hero-content"><div class="eyebrow" data-bind="heroEyebrow">Luxury Interior Studio</div><h1><span data-bind="heroTitle1">Designing</span><br><span class="gold" data-bind="heroTitle2">Your Dreams</span></h1><p data-bind="heroText">We create timeless, luxurious and functional spaces that reflect your personality and elevate everyday living.</p><div class="actions"><a class="btn primary" href="#contact" data-bind="primaryBtn">Book Consultation</a><a class="btn" href="#projects" data-bind="secondaryBtn">Explore Projects</a></div></div><div class="hero-stats"><div class="stat"><i class="fa-solid fa-couch"></i><div><b data-bind="stat1Num">120+</b><span data-bind="stat1Label">Projects Completed</span></div></div><div class="stat"><i class="fa-solid fa-face-smile"></i><div><b data-bind="stat2Num">100%</b><span data-bind="stat2Label">Client Satisfaction</span></div></div><div class="stat"><i class="fa-solid fa-trophy"></i><div><b data-bind="stat3Num">4+</b><span data-bind="stat3Label">Years Experience</span></div></div><div class="stat"><i class="fa-solid fa-headset"></i><div><b data-bind="stat4Num">24/7</b><span data-bind="stat4Label">Design Support</span></div></div></div></div><div class="hero-social"><a id="socialInstagram"><i class="fa-brands fa-instagram"></i></a><a id="socialFacebook"><i class="fa-brands fa-facebook-f"></i></a><a id="socialPinterest"><i class="fa-brands fa-pinterest-p"></i></a><a id="socialWhatsapp"><i class="fa-brands fa-whatsapp"></i></a></div></section>
-<div class="marquee"><div class="track"><span>Custom Designs</span><span>Premium Quality</span><span>Timely Delivery</span><span>Bespoke Solutions</span><span>Modular Kitchen</span><span>False Ceiling</span><span>Custom Designs</span><span>Premium Quality</span><span>Timely Delivery</span><span>Bespoke Solutions</span></div></div>
-<section class="light" id="about"><div class="container about reveal"><div class="about-images"><img id="aboutImg1"><img id="aboutImg2"></div><div class="about-copy"><div class="eyebrow" data-bind="aboutEyebrow">About Castle Design</div><h2 data-bind="aboutTitle">Interiors with character, comfort and craft.</h2><p data-bind="aboutText">We are a young, energetic interior studio with a fresh design perspective and disciplined execution. Our work balances premium aesthetics, practical layouts, durable materials and transparent project coordination.</p><div class="checks"><div><i class="fa-solid fa-check"></i><span data-bind="aboutPoint1">Turnkey interior solutions</span></div><div><i class="fa-solid fa-check"></i><span data-bind="aboutPoint2">Custom designs with elegant finish</span></div><div><i class="fa-solid fa-check"></i><span data-bind="aboutPoint3">Budget management</span></div><div><i class="fa-solid fa-check"></i><span data-bind="aboutPoint4">Timely execution</span></div></div></div></div></section>
-<section><div class="container"><div class="section-head reveal"><h2>Mission & Vision</h2><p>Clear purpose, premium taste and practical execution for every client space.</p></div><div class="mission reveal"><div class="mission-card"><i class="fa-solid fa-bullseye"></i><h3 data-bind="missionTitle">Our Mission</h3><p data-bind="missionText">To craft functional, aesthetic and personalized interiors by blending creativity with practical solutions, transparent communication and commitment to quality.</p></div><div class="mission-card"><i class="fa-solid fa-eye"></i><h3 data-bind="visionTitle">Our Vision</h3><p data-bind="visionText">To bring beautiful, comfortable and functional interiors to life — delivering cost-effective designs that reflect each client's dreams.</p></div></div></div></section>
-<section id="services"><div class="container"><div class="section-head reveal"><h2 data-bind="servicesTitle">Signature Services</h2><p data-bind="servicesText">Complete interior solutions designed for modern living, crafted with premium finish and practical functionality.</p></div><div class="cards reveal" id="servicesGrid"></div></div></section>
-<section class="light" id="process"><div class="container"><div class="section-head reveal"><h2 data-bind="processTitle">How We Work</h2><p data-bind="processText">A clear, client-friendly process that turns ideas into beautifully finished spaces without confusion.</p></div><div class="process reveal"><div class="process-visual" id="processImg"><div class="process-tag"><h3 data-bind="processTagTitle">From vision to handover</h3><p data-bind="processTagText">Every stage is planned, tracked and finished with attention to detail.</p></div></div><div class="steps" id="stepsGrid"></div></div></div></section>
-<section><div class="container"><div class="section-head reveal"><h2>Before & After</h2><p>A quick interactive transformation view to show how design changes the feel of a space.</p></div><div class="ba-grid reveal" id="baGrid"></div></div></section>
-<section id="projects"><div class="container"><div class="section-head reveal"><h2 data-bind="projectsTitle">Project Showcase</h2><p data-bind="projectsText">Warm Indian homes, premium finishes and thoughtful design details that make every space feel personal.</p></div><div class="portfolio reveal" id="projectsGrid"></div></div></section>
-<section class="light"><div class="container"><div class="section-head reveal"><h2>Why Castle Design?</h2><p>We combine design thinking, site discipline and client communication to deliver beautiful, practical spaces.</p></div><div class="cards reveal" id="whyGrid"></div></div></section>
-<section><div class="container"><div class="section-head reveal"><h2 data-bind="reviewsTitle">Client Words</h2><p data-bind="reviewsText">Real confidence comes from thoughtful design, transparent updates and a finish clients love.</p></div><div class="reviews reveal" id="reviewsGrid"></div></div></section>
-<section class="light" id="contact"><div class="container contact reveal"><div class="contact-card"><h3 data-bind="contactTitle">Start your dream project</h3><p data-bind="contactText">Book a free consultation and let us understand your space, budget and style.</p><div class="contact-row"><i class="fa-solid fa-location-dot"></i><span data-bind="address">Plot No.61, 2nd Cross Street, Perambur Redhills High Road, Kathirvedu, Chennai - 600066</span></div><div class="contact-row"><i class="fa-solid fa-phone"></i><span data-bind="phone">+91 7299820087 / +91 7708163644</span></div><div class="contact-row"><i class="fa-solid fa-envelope"></i><span data-bind="email">info@castledesign.com</span></div><div class="contact-row"><i class="fa-solid fa-globe"></i><span data-bind="website">www.castledesign.com</span></div></div><div class="form"><h3>Free Consultation</h3><form onsubmit="event.preventDefault();alert('Thank you! Castle Design will contact you soon.');this.reset();"><input required placeholder="Your Name"><input type="email" required placeholder="Email Address"><input placeholder="Phone Number"><select><option>Project Type</option><option>Home Interior</option><option>Modular Kitchen</option><option>Office Interior</option></select><textarea required placeholder="Tell us about your project"></textarea><button class="btn primary" type="submit">Send Enquiry <i class="fa-solid fa-paper-plane"></i></button></form></div></div></section>
-<section class="light"><div class="container faq-map reveal"><div><div class="section-head" style="margin-bottom:24px"><h2>Questions Clients Ask</h2></div><div id="faqGrid"></div></div><div><div class="section-head" style="margin-bottom:24px"><h2>Locate Us</h2></div><div class="map"><iframe id="mapFrame" loading="lazy" allowfullscreen></iframe></div></div></div></section>
-<section><div class="container reveal"><div class="newsletter"><div><h2 data-bind="newsletterTitle">Get design ideas & offers</h2><p data-bind="newsletterText">Subscribe for interior tips, project inspiration and free consultation updates.</p></div><form onsubmit="event.preventDefault();alert('Thank you for subscribing!');this.reset();"><input type="email" required placeholder="Enter your email"><button class="btn primary" type="submit">Subscribe</button></form></div></div></section>
-<div class="footer-cta"><div class="container reveal"><h2 data-bind="footerCtaTitle">Ready to Transform Your Home?</h2><p data-bind="footerCtaText">Luxury is not about spending more. It is about planning better.</p><a class="btn primary" href="#contact">Claim Free Consultation</a></div></div>
-<footer class="footer"><div class="container"><div class="footer-grid reveal"><div class="footer-logo"><div class="brand-icon">CD</div><h4 data-bind="brandName">CASTLE DESIGN</h4><p><span data-bind="brandSubtitle">Interior Studio</span><br><span data-bind="footerText">Designing Your Dreams. Creating timeless interiors that inspire.</span></p><div class="social"><a id="footerInstagram"><i class="fa-brands fa-instagram"></i></a><a id="footerFacebook"><i class="fa-brands fa-facebook-f"></i></a><a id="footerPinterest"><i class="fa-brands fa-pinterest-p"></i></a><a id="footerYoutube"><i class="fa-brands fa-youtube"></i></a></div></div><div><h4>Navigation</h4><p><a href="#home">Home</a><br><a href="#about">About</a><br><a href="#services">Services</a><br><a href="#process">How We Work</a><br><a href="#projects">Projects</a></p></div><div><h4>Services</h4><p id="footerServices"></p></div><div><h4>Project Glimpse</h4><div class="mini-gallery" id="miniGallery"></div></div></div><div class="bottom"><span>© 2026 Castle Design Interior Studio. All Rights Reserved.</span><span>120+ Projects • ★★★★★ Trusted by Happy Clients • Chennai, India</span></div></div></footer>
-<div class="float"><a href="#home" class="top" id="topBtn"><i class="fa-solid fa-chevron-up"></i></a><a id="callFloat" class="call"><i class="fa-solid fa-phone"></i></a><a id="waFloat" class="wa" target="_blank"><i class="fa-brands fa-whatsapp"></i></a></div><button class="admin-open" id="adminOpen" title="Admin"><i class="fa-solid fa-gear"></i></button>
-<div class="admin" id="admin"><div class="admin-panel"><div class="admin-head"><h2>Castle Admin</h2><button class="admin-close" id="adminClose">Close</button></div><div id="login" class="login"><p>Enter admin password to edit website content.</p><input id="pass" type="password" placeholder="Password"><button id="loginBtn">Login</button><p class="upload-note">Default password: <b>castle2026</b>. This is client-side protection for a single-file website.</p></div><div id="editor" style="display:none"><div class="admin-tabs" id="tabs"></div><div id="adminSections"></div><div class="admin-actions"><button id="saveBtn">Save Changes</button><button class="danger" id="resetBtn">Reset</button></div></div></div></div>
-<script>
-const DEFAULT={brandName:'CASTLE DESIGN',brandSubtitle:'INTERIOR STUDIO',navCta:'Book Consultation',heroEyebrow:'Luxury Interior Studio',heroTitle1:'Designing',heroTitle2:'Your Dreams',heroText:'We create timeless, luxurious and functional spaces that reflect your personality and elevate everyday living.',primaryBtn:'Book Consultation',secondaryBtn:'Explore Projects',stat1Num:'120+',stat1Label:'Projects Completed',stat2Num:'100%',stat2Label:'Client Satisfaction',stat3Num:'4+',stat3Label:'Years Experience',stat4Num:'24/7',stat4Label:'Design Support',aboutEyebrow:'About Castle Design',aboutTitle:'Interiors with character, comfort and craft.',aboutText:'We are a young, energetic interior studio with a fresh design perspective and disciplined execution. Our work balances premium aesthetics, practical layouts, durable materials and transparent project coordination.',aboutPoint1:'Turnkey interior solutions',aboutPoint2:'Custom designs with elegant finish',aboutPoint3:'Budget management',aboutPoint4:'Timely execution',missionTitle:'Our Mission',missionText:'To craft functional, aesthetic and personalized interiors by blending creativity with practical solutions, transparent communication and commitment to quality.',visionTitle:'Our Vision',visionText:"To bring beautiful, comfortable and functional interiors to life — delivering cost-effective designs that reflect each client's dreams.",servicesTitle:'Signature Services',servicesText:'Complete interior solutions designed for modern living, crafted with premium finish and practical functionality.',processTitle:'How We Work',processText:'A clear, client-friendly process that turns ideas into beautifully finished spaces without confusion.',processTagTitle:'From vision to handover',processTagText:'Every stage is planned, tracked and finished with attention to detail.',projectsTitle:'Project Showcase',projectsText:'Warm Indian homes, premium finishes and thoughtful design details that make every space feel personal.',reviewsTitle:'Client Words',reviewsText:'Real confidence comes from thoughtful design, transparent updates and a finish clients love.',contactTitle:'Start your dream project',contactText:'Book a free consultation and let us understand your space, budget and style.',address:'Plot No.61, 2nd Cross Street, Perambur Redhills High Road, Kathirvedu, Chennai - 600066',phone:'+91 7299820087 / +91 7708163644',email:'info@castledesign.com',website:'www.castledesign.com',newsletterTitle:'Get design ideas & offers',newsletterText:'Subscribe for interior tips, project inspiration and free consultation updates.',footerCtaTitle:'Ready to Transform Your Home?',footerCtaText:'Luxury is not about spending more. It is about planning better.',footerText:'Designing Your Dreams. Creating timeless interiors that inspire.',mapQuery:'Kathirvedu Chennai 600066',instagram:'#',facebook:'#',pinterest:'#',youtube:'#',whatsapp:'917299820087',call:'917299820087',heroImg:'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1800&q=85',aboutImg1:'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1000&q=85',aboutImg2:'https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?auto=format&fit=crop&w=900&q=85',processImg:'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=85',services:[['fa-kitchen-set','Modular Kitchen','Elegant, durable and space-efficient kitchens built around your daily lifestyle.'],['fa-couch','Modular Furniture','Custom wardrobes, TV units, storage systems and furniture solutions.'],['fa-brush','Texture & Painting','Premium wall finishes, textures and color palettes for every room.'],['fa-layer-group','Flooring','Wooden, marble, vinyl, tile and artificial grass flooring options.'],['fa-border-top-left','False Ceiling','Stylish ceiling and partition systems with integrated lighting.'],['fa-lightbulb','LED Lighting','Smart ambient lighting that elevates mood, depth and luxury.']],steps:[['01','Consultation','We understand your needs, space, lifestyle, style preferences and budget.'],['02','Design & Planning','We prepare layouts, moodboards, 3D concepts and execution planning.'],['03','Material Selection','We help you choose reliable materials and finishes within your budget.'],['04','Execution & Handover','Our team coordinates contractors, quality checks and timely delivery.']],projects:[['Luxury Living Room','https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=85'],['Modular Kitchen','https://images.unsplash.com/photo-1556912167-f556f1f39fdf?auto=format&fit=crop&w=900&q=85'],['Bedroom Interior','https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=900&q=85'],['Dining Space','https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?auto=format&fit=crop&w=900&q=85'],['Office Interior','https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=85']],why:[['fa-shield-heart','Quality Materials','We recommend durable finishes and practical materials suited for Indian homes.'],['fa-clock','On-Time Delivery','Structured scheduling helps us keep execution organized and predictable.'],['fa-wallet','Budget Control','Transparent planning helps avoid surprises and keeps the project realistic.']],reviews:[['Rajesh Kumar','Homeowner, Chennai','Castle Design transformed our home beautifully. Their attention to detail and budget management was outstanding.'],['Sneha Reddy','Business Owner','Professional team with creative ideas. Our office interior now looks world-class and was completed before deadline.'],['Anand & Priya','Homeowners','The modular kitchen they designed is stunning. Quality materials, perfect finish and a very smooth experience.']],faqs:[['What services do you offer?','We handle modular kitchens, custom furniture, false ceilings, painting, flooring, curtains, LED lighting and complete turnkey interiors.'],['Do you provide free consultation?','Yes. We offer an initial consultation to understand your space, expectations and budget.'],['Can you work within my budget?','Yes. We suggest suitable materials, finishes and execution options based on the available budget.'],['Do you provide materials?','Yes. We can coordinate materials, contractors and execution as part of turnkey interior work.']],ba:[['Before Living Room','https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1000&q=85','After Living Room','https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1000&q=85'],['Before Kitchen','https://images.unsplash.com/photo-1556912167-f556f1f39fdf?auto=format&fit=crop&w=1000&q=70','After Kitchen','https://images.unsplash.com/photo-1600489000022-c2086d79f9d4?auto=format&fit=crop&w=1000&q=85']]};
-let DATA=JSON.parse(localStorage.getItem('castleCMS')||'null')||structuredClone(DEFAULT);const $=s=>document.querySelector(s),$$=s=>document.querySelectorAll(s);function bind(){document.title=DATA.brandName+' | '+DATA.brandSubtitle;$$('[data-bind]').forEach(el=>{const k=el.dataset.bind;if(DATA[k]!=null)el.textContent=DATA[k]});$('.hero').style.backgroundImage=`url('${DATA.heroImg}')`;$('#aboutImg1').src=DATA.aboutImg1;$('#aboutImg2').src=DATA.aboutImg2;$('#processImg').style.backgroundImage=`url('${DATA.processImg}')`;$('#servicesGrid').innerHTML=DATA.services.map(s=>`<div class="service"><i class="fa-solid ${s[0]}"></i><h3>${s[1]}</h3><p>${s[2]}</p></div>`).join('');$('#stepsGrid').innerHTML=DATA.steps.map(s=>`<div class="step"><div class="num">${s[0]}</div><div><h3>${s[1]}</h3><p>${s[2]}</p></div></div>`).join('');$('#projectsGrid').innerHTML=DATA.projects.map(p=>`<div class="project" data-title="${p[0]}"><img loading="lazy" src="${p[1]}" alt="${p[0]}"></div>`).join('');$('#whyGrid').innerHTML=DATA.why.map(w=>`<div class="why-card"><i class="fa-solid ${w[0]}"></i><h3>${w[1]}</h3><p>${w[2]}</p></div>`).join('');$('#reviewsGrid').innerHTML=DATA.reviews.map(r=>`<div class="review"><div class="stars">★★★★★</div><p>${r[2]}</p><div class="person"><div class="avatar">${r[0].split(' ').map(x=>x[0]).slice(0,2).join('')}</div><div><b>${r[0]}</b><span>${r[1]}</span></div></div></div>`).join('');$('#faqGrid').innerHTML=DATA.faqs.map((f,i)=>`<div class="faq-item ${i==0?'open':''}"><button class="faq-q">${f[0]} <i class="fa-solid fa-plus"></i></button><div class="faq-a">${f[1]}</div></div>`).join('');$('#baGrid').innerHTML=DATA.ba.map(b=>`<div class="before-after"><img src="${b[1]}" alt="${b[0]}"><img class="after" src="${b[3]}" alt="${b[2]}"><span class="ba-label before">Before</span><span class="ba-label after-l">After</span><div class="ba-line"></div><div class="ba-handle"><i class="fa-solid fa-arrows-left-right"></i></div></div>`).join('');$('#miniGallery').innerHTML=DATA.projects.slice(0,6).map(p=>`<img src="${p[1]}" alt="${p[0]}">`).join('');$('#footerServices').innerHTML=DATA.services.map(s=>s[1]).join('<br>');$('#mapFrame').src='https://www.google.com/maps?q='+encodeURIComponent(DATA.mapQuery)+'&output=embed';['Instagram','Facebook','Pinterest','Youtube'].forEach(n=>{let k=n.toLowerCase(),el=$('#social'+n)||$('#footer'+n); if($('#social'+n)) $('#social'+n).href=DATA[k]||'#'; if($('#footer'+n)) $('#footer'+n).href=DATA[k]||'#'});$('#socialWhatsapp').href='https://wa.me/'+DATA.whatsapp;$('#waFloat').href='https://wa.me/'+DATA.whatsapp+'?text=Hi!%20I%20want%20to%20know%20more%20about%20your%20interior%20design%20services.';$('#callFloat').href='tel:+'+DATA.call;attachDynamic()}function attachDynamic(){$$('.faq-q').forEach(q=>q.onclick=()=>q.parentElement.classList.toggle('open'));$$('.before-after').forEach(box=>{const after=box.querySelector('.after'),line=box.querySelector('.ba-line'),handle=box.querySelector('.ba-handle');const move=x=>{const r=box.getBoundingClientRect();let p=Math.max(0,Math.min(1,(x-r.left)/r.width))*100;after.style.clipPath=`inset(0 0 0 ${p}%)`;line.style.left=p+'%';handle.style.left=p+'%'};box.onpointermove=e=>move(e.clientX);box.onpointerdown=e=>move(e.clientX);});}
-function save(){localStorage.setItem('castleCMS',JSON.stringify(DATA));bind();alert('Saved successfully on this browser.')}function fileToData(input,cb){const f=input.files[0];if(!f)return;const r=new FileReader();r.onload=()=>cb(r.result);r.readAsDataURL(f)}
-function buildAdmin(){const sections={Basic:['brandName','brandSubtitle','navCta','instagram','facebook','pinterest','youtube','whatsapp','call'],Hero:['heroEyebrow','heroTitle1','heroTitle2','heroText','primaryBtn','secondaryBtn','stat1Num','stat1Label','stat2Num','stat2Label','stat3Num','stat3Label','stat4Num','stat4Label','heroImg'],About:['aboutEyebrow','aboutTitle','aboutText','aboutPoint1','aboutPoint2','aboutPoint3','aboutPoint4','aboutImg1','aboutImg2','missionTitle','missionText','visionTitle','visionText'],Process:['processTitle','processText','processTagTitle','processTagText','processImg'],Contact:['contactTitle','contactText','address','phone','email','website','mapQuery','newsletterTitle','newsletterText','footerCtaTitle','footerCtaText','footerText']};const lists={Services:'services',Steps:'steps',Projects:'projects',Why:'why',Reviews:'reviews',FAQ:'faqs','Before/After':'ba'};const tabs=$('#tabs'),wrap=$('#adminSections');tabs.innerHTML='';wrap.innerHTML='';Object.keys(sections).concat(Object.keys(lists)).forEach((name,i)=>{tabs.innerHTML+=`<button class="${i==0?'active':''}" data-tab="${name}">${name}</button>`;let div=document.createElement('div');div.className='admin-section '+(i==0?'active':'');div.id='tab-'+name.replace(/\W/g,'');if(sections[name]) div.innerHTML=sections[name].map(k=>field(k)).join('');else div.innerHTML=listEditor(lists[name]);wrap.appendChild(div)});$$('#tabs button').forEach(btn=>btn.onclick=()=>{$$('#tabs button').forEach(b=>b.classList.remove('active'));$$('.admin-section').forEach(s=>s.classList.remove('active'));btn.classList.add('active');$('#tab-'+btn.dataset.tab.replace(/\W/g,'')).classList.add('active')});}
-function field(k){const isImg=/Img$|heroImg|processImg/.test(k);return `<div><label>${k}</label>${isImg?`<input type="file" accept="image/*" onchange="fileToData(this,v=>{DATA['${k}']=v;this.previousElementSibling&&0})"><input value="${DATA[k]||''}" onchange="DATA['${k}']=this.value" placeholder="Image URL or uploaded data">`:(String(DATA[k]||'').length>80?`<textarea onchange="DATA['${k}']=this.value">${DATA[k]||''}</textarea>`:`<input value="${DATA[k]||''}" onchange="DATA['${k}']=this.value">`)}</div>`}
-function listEditor(key){return `<div class="edit-list">${DATA[key].map((arr,i)=>`<div class="edit-card"><label>${key} ${i+1}</label>${arr.map((v,j)=>{let isImage=(key=='projects'&&j==1)||(key=='ba'&&(j==1||j==3));return isImage?`<input type="file" accept="image/*" onchange="fileToData(this,v=>{DATA['${key}'][${i}][${j}]=v})"><input value="${v}" onchange="DATA['${key}'][${i}][${j}]=this.value">`:`<textarea onchange="DATA['${key}'][${i}][${j}]=this.value">${v}</textarea>`}).join('')}<button class="danger" onclick="DATA['${key}'].splice(${i},1);buildAdmin()">Remove</button></div>`).join('')}<button onclick="addItem('${key}');buildAdmin()">Add New</button></div>`}
-function addItem(key){const sample={services:['fa-star','New Service','Description'],steps:['05','New Step','Description'],projects:['New Project','https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=85'],why:['fa-star','New Feature','Description'],reviews:['Client Name','Location','Review text'],faqs:['Question?','Answer text'],ba:['Before','https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=85','After','https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=85']};DATA[key].push(sample[key])}
-$('#adminOpen').onclick=()=>$('#admin').classList.add('show');$('#adminClose').onclick=()=>$('#admin').classList.remove('show');$('#loginBtn').onclick=()=>{if($('#pass').value==='castle2026'){ $('#login').style.display='none';$('#editor').style.display='block';buildAdmin()}else alert('Wrong password')};$('#saveBtn').onclick=save;$('#resetBtn').onclick=()=>{if(confirm('Reset all content?')){localStorage.removeItem('castleCMS');DATA=structuredClone(DEFAULT);buildAdmin();bind()}};
-window.addEventListener('scroll',()=>{$('#header').classList.toggle('scrolled',scrollY>60);$('#topBtn').classList.toggle('show',scrollY>420)});$('#hamb').onclick=()=>$('#links').classList.toggle('open');$$('.links a').forEach(a=>a.onclick=()=>$('#links').classList.remove('open'));window.addEventListener('pointermove',e=>{if($('#glow')){$('#glow').style.left=e.clientX+'px';$('#glow').style.top=e.clientY+'px'}});const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('active')}),{threshold:.13});$$('.reveal').forEach(el=>io.observe(el));bind();
-</script>
-</body></html>
+  <header class="topbar">
+    <div class="container nav">
+      <a class="brand" href="#home" aria-label="Castle Design home">
+        <span class="logo">CD</span>
+        <span>CASTLE DESIGN <small>INTERIOR STUDIO</small></span>
+      </a>
+      <nav class="links" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#process">Process</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="btn" href="#contact">Book Consultation</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Premium Interior Design & Turnkey Execution in Chennai</span>
+          <h1>Designing Your Dreams</h1>
+          <p>We design and execute elegant, functional interiors for homes and workspaces across Chennai — from concept and 3D design to material selection, site coordination and handover.</p>
+          <div class="hero-actions">
+            <a class="btn whatsapp" href="https://wa.me/917299820087?text=Hi%20Castle%20Design%2C%20I%20want%20a%20free%20interior%20consultation." target="_blank" rel="noopener">Chat on WhatsApp</a>
+            <a class="btn secondary" href="#projects">Explore Projects</a>
+          </div>
+          <div class="stats">
+            <div class="stat"><b>120+</b><span>Projects Completed</span></div>
+            <div class="stat"><b>4+</b><span>Years Experience</span></div>
+            <div class="stat"><b>100%</b><span>Client Focus</span></div>
+            <div class="stat"><b>24/7</b><span>Design Support</span></div>
+          </div>
+        </div>
+        <div class="visual" role="img" aria-label="Premium modern interior placeholder image">
+          <div class="visual-card">
+            <h3>Start with a free consultation</h3>
+            <p>Share your space, budget and preferred style. We will guide you with practical design possibilities.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="ticker">
+      <div class="ticker-track">
+        Custom Designs • Premium Quality • Timely Delivery • Bespoke Solutions • Modular Kitchen • False Ceiling • Wardrobes • Turnkey Execution • Custom Designs • Premium Quality • Timely Delivery • Bespoke Solutions • Modular Kitchen • False Ceiling • Wardrobes • Turnkey Execution •
+      </div>
+    </div>
+
+    <section id="about">
+      <div class="container grid-2">
+        <div>
+          <span class="eyebrow">About Castle Design</span>
+          <h2>Interiors with character, comfort and craft.</h2>
+        </div>
+        <div class="card">
+          <p>Castle Design is a young, energetic interior studio with a fresh design perspective and disciplined execution. Our work balances premium aesthetics, practical layouts, durable materials and transparent project coordination.</p>
+          <div class="list">
+            <div>Turnkey interior solutions from design to handover</div>
+            <div>Custom designs with elegant finishes and practical storage</div>
+            <div>Budget planning with material clarity</div>
+            <div>Regular project updates and timely execution</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Signature Services</span>
+            <h2>Complete interior solutions for modern living.</h2>
+          </div>
+          <p>Choose a single room upgrade or a full turnkey package. Every service is planned around your space, lifestyle and budget.</p>
+        </div>
+        <div class="grid-4">
+          <div class="card"><div class="icon">01</div><h3>Full Home Interiors</h3><p>Living, dining, bedrooms, kitchen and complete home execution.</p></div>
+          <div class="card"><div class="icon">02</div><h3>Modular Kitchen</h3><p>Smart layouts, durable shutters, storage accessories and clean finishes.</p></div>
+          <div class="card"><div class="icon">03</div><h3>Wardrobes</h3><p>Swing, sliding and custom wardrobes designed for daily convenience.</p></div>
+          <div class="card"><div class="icon">04</div><h3>False Ceiling</h3><p>Elegant ceiling concepts with lighting plans and neat execution.</p></div>
+          <div class="card"><div class="icon">05</div><h3>TV Units</h3><p>Feature walls, display shelves, storage and premium living room units.</p></div>
+          <div class="card"><div class="icon">06</div><h3>Office Interiors</h3><p>Functional workspaces, cabins, storage and brand-aligned office design.</p></div>
+          <div class="card"><div class="icon">07</div><h3>Renovation</h3><p>Upgrade existing spaces with better layouts, finishes and storage.</p></div>
+          <div class="card"><div class="icon">08</div><h3>Turnkey Execution</h3><p>Design, materials, vendor coordination, site supervision and handover.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="process">
+      <div class="container process">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">How We Work</span>
+            <h2>From vision to handover.</h2>
+          </div>
+          <p>A clear, client-friendly process that turns ideas into beautifully finished spaces without confusion.</p>
+        </div>
+        <div class="grid-4">
+          <div class="card"><h3>Consultation</h3><p>We understand your space, family needs, style preferences and budget.</p></div>
+          <div class="card"><h3>Design & Estimate</h3><p>We create layouts, mood direction and a transparent scope-based estimate.</p></div>
+          <div class="card"><h3>Material Finalization</h3><p>You select finishes, hardware, colors and practical details before execution.</p></div>
+          <div class="card"><h3>Execution & Handover</h3><p>We coordinate the site, track progress and finish with quality checks.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Project Showcase</span>
+            <h2>Warm Indian homes with premium details.</h2>
+          </div>
+          <p>Replace the placeholder images with real photos from completed projects. Add location and project type for better trust.</p>
+        </div>
+        <div class="grid-4">
+          <article class="card project"><div class="project-img"></div><div class="project-body"><span class="badge">3BHK Home</span><h3>Elegant Apartment Interior</h3><p>Living room, wardrobes, kitchen and custom storage.</p></div></article>
+          <article class="card project"><div class="project-img"></div><div class="project-body"><span class="badge">Kitchen</span><h3>Premium Modular Kitchen</h3><p>Practical work triangle, tall storage and durable finishes.</p></div></article>
+          <article class="card project"><div class="project-img"></div><div class="project-body"><span class="badge">Bedroom</span><h3>Calm Master Bedroom</h3><p>Wardrobe, study corner, wall panel and warm lighting.</p></div></article>
+          <article class="card project"><div class="project-img"></div><div class="project-body"><span class="badge">Office</span><h3>Compact Office Setup</h3><p>Functional workstations, storage and clean brand presentation.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="pricing" id="pricing">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Budget Guidance</span>
+            <h2>Plan better before you spend.</h2>
+          </div>
+          <p>Final pricing depends on site size, materials, hardware, finish and scope. These are guidance ranges only.</p>
+        </div>
+        <div class="grid-3">
+          <div class="card"><h3>Modular Kitchen</h3><div class="price">From ₹1.5L</div><p>Basic modular kitchen planning, storage and finish selection.</p></div>
+          <div class="card"><h3>2BHK Interiors</h3><div class="price">From ₹4L</div><p>Kitchen, wardrobes and essential living room design elements.</p></div>
+          <div class="card"><h3>3BHK Turnkey</h3><div class="price">Custom Quote</div><p>Complete design and execution based on your requirement.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="why">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Why Castle Design?</span>
+            <h2>Design thinking with site discipline.</h2>
+          </div>
+        </div>
+        <div class="grid-4">
+          <div class="card"><b>Transparent Scope</b><p>Clear inclusions, material choices and budget discussions before work starts.</p></div>
+          <div class="card"><b>Practical Design</b><p>Beautiful ideas balanced with storage, maintenance and daily usability.</p></div>
+          <div class="card"><b>Timely Updates</b><p>Project progress communication so clients know what is happening on site.</p></div>
+          <div class="card"><b>Finish Focus</b><p>Attention to edges, alignment, hardware, lighting and final presentation.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Client Words</span>
+            <h2>Real confidence comes from happy clients.</h2>
+          </div>
+          <p>Replace these sample reviews with actual customer names and project photos when available.</p>
+        </div>
+        <div class="grid-3">
+          <div class="card testimonial"><div class="stars">★★★★★</div><p>“Castle Design understood our budget and gave practical suggestions. The final home feels elegant and comfortable.”</p><br><b>Client Name</b><p>Home Interior, Chennai</p></div>
+          <div class="card testimonial"><div class="stars">★★★★★</div><p>“The kitchen storage planning was very useful. The finish looks premium and daily use is easy.”</p><br><b>Client Name</b><p>Modular Kitchen</p></div>
+          <div class="card testimonial"><div class="stars">★★★★★</div><p>“Good coordination and clear updates throughout the project. The team handled the execution neatly.”</p><br><b>Client Name</b><p>Turnkey Project</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="container grid-2">
+        <div>
+          <span class="eyebrow">Questions Clients Ask</span>
+          <h2>Everything to know before starting.</h2>
+        </div>
+        <div class="faq">
+          <details open><summary>How long does a home interior project take?</summary><p>Timeline depends on scope and site readiness. A modular kitchen may take a few weeks, while full home interiors usually need a planned execution schedule.</p></details>
+          <details><summary>Do you provide 3D designs?</summary><p>Yes. Design visualization can be included based on the project scope so you can understand the look before execution.</p></details>
+          <details><summary>Can you work within my budget?</summary><p>Yes. We discuss priority areas, materials and finish levels to create a practical plan for your budget.</p></details>
+          <details><summary>Do you handle materials and execution?</summary><p>Yes. Castle Design offers turnkey support including design, material planning, vendor coordination and site execution.</p></details>
+          <details><summary>Which areas do you serve?</summary><p>We serve Chennai and nearby areas. Share your location on WhatsApp to confirm availability.</p></details>
+          <details><summary>Do you provide warranty?</summary><p>Warranty depends on selected materials, hardware and project scope. Details should be confirmed in the final quotation.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container contact-wrap">
+        <div>
+          <span class="eyebrow">Start your dream project</span>
+          <h2>Book a free consultation.</h2>
+          <p>Tell us about your property, requirement and budget. We will guide you with the next best step.</p>
+          <div class="contact-info" style="margin-top:24px">
+            <div class="card"><h3>Visit Us</h3><p>Plot No.61, 2nd Cross Street, Perambur Redhills High Road, Kathirvedu, Chennai - 600066</p></div>
+            <div class="card"><h3>Call / WhatsApp</h3><p>+91 7299820087 / +91 7708163644</p></div>
+            <div class="card"><h3>Email</h3><p>Update with your verified business email address.</p></div>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Free Consultation</h3>
+          <p class="note">This form opens WhatsApp with the enquiry details. No backend is required.</p>
+          <form id="leadForm">
+            <div class="form-row">
+              <input required name="name" placeholder="Your name" />
+              <input required name="phone" placeholder="Phone number" />
+            </div>
+            <div class="form-row">
+              <input name="location" placeholder="Location / Area" />
+              <select name="property">
+                <option>Property Type</option>
+                <option>Apartment</option>
+                <option>Independent House</option>
+                <option>Villa</option>
+                <option>Office / Commercial</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <select name="project">
+                <option>Project Type</option>
+                <option>Full Home Interior</option>
+                <option>Modular Kitchen</option>
+                <option>Wardrobes</option>
+                <option>Office Interior</option>
+                <option>Renovation</option>
+              </select>
+              <select name="budget">
+                <option>Budget Range</option>
+                <option>Below ₹2L</option>
+                <option>₹2L - ₹5L</option>
+                <option>₹5L - ₹10L</option>
+                <option>₹10L+</option>
+              </select>
+            </div>
+            <textarea name="message" placeholder="Tell us about your requirement"></textarea>
+            <button class="btn" type="submit">Send Enquiry on WhatsApp</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section id="map">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Locate Us</span>
+            <h2>Kathirvedu, Chennai.</h2>
+          </div>
+        </div>
+        <iframe class="map" title="Castle Design location map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Plot%20No.61%202nd%20Cross%20Street%20Perambur%20Redhills%20High%20Road%20Kathirvedu%20Chennai%20600066&output=embed"></iframe>
+      </div>
+    </section>
+
+    <section>
+      <div class="container card" style="text-align:center">
+        <span class="eyebrow">Ready to Transform Your Home?</span>
+        <h2>Luxury is not about spending more. It is about planning better.</h2>
+        <p style="margin:18px auto 26px;max-width:680px">Get a free consultation and discover what is possible for your space.</p>
+        <a class="btn whatsapp" href="https://wa.me/917299820087?text=Hi%20Castle%20Design%2C%20I%20want%20to%20claim%20a%20free%20consultation." target="_blank" rel="noopener">Claim Free Consultation</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="brand"><span class="logo">CD</span><span>CASTLE DESIGN <small>INTERIOR STUDIO</small></span></div>
+        <p style="margin-top:14px">Designing Your Dreams. Creating timeless interiors that inspire.</p>
+      </div>
+      <div><h3>Navigation</h3><a href="#about">About</a><a href="#services">Services</a><a href="#process">How We Work</a><a href="#projects">Projects</a></div>
+      <div><h3>Services</h3><a href="#services">Home Interiors</a><a href="#services">Modular Kitchen</a><a href="#services">Wardrobes</a><a href="#services">Office Interiors</a></div>
+      <div><h3>Contact</h3><a href="tel:+917299820087">+91 7299820087</a><a href="tel:+917708163644">+91 7708163644</a><a href="#contact">Kathirvedu, Chennai</a></div>
+    </div>
+    <div class="container" style="margin-top:34px;color:var(--muted);font-size:14px">© 2026 Castle Design Interior Studio. All Rights Reserved. 120+ Projects • Trusted by Happy Clients • Chennai, India</div>
+  </footer>
+
+  <div class="sticky-cta">
+    <a class="btn secondary" href="tel:+917299820087">Call</a>
+    <a class="btn whatsapp" href="https://wa.me/917299820087?text=Hi%20Castle%20Design%2C%20I%20want%20a%20free%20interior%20consultation." target="_blank" rel="noopener">WhatsApp</a>
+  </div>
+
+  <script>
+    document.getElementById('leadForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const data = new FormData(e.target);
+      const lines = [
+        'Hi Castle Design, I want a free consultation.',
+        '',
+        'Name: ' + (data.get('name') || ''),
+        'Phone: ' + (data.get('phone') || ''),
+        'Location: ' + (data.get('location') || ''),
+        'Property: ' + (data.get('property') || ''),
+        'Project: ' + (data.get('project') || ''),
+        'Budget: ' + (data.get('budget') || ''),
+        'Requirement: ' + (data.get('message') || '')
+      ];
+      const url = 'https://wa.me/917299820087?text=' + encodeURIComponent(lines.join('\n'));
+      window.open(url, '_blank', 'noopener');
+    });
+  </script>
+</body>
+</html>
